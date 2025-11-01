@@ -16,6 +16,6 @@ Route::get('/produk', function () {
 });
 
 Route::get('/produk/tambah', function () {
-    return view('produk_tambah'); 
-})->name('produk.tambah'); 
+    return view('tambahproduk'); 
+})->name('produk.tambah');
 
