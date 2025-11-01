@@ -48,7 +48,6 @@
       margin-left: 120px; 
     }
 
-    
     .sidebar {
       width: 260px;
       background-color: #fff;
@@ -103,8 +102,8 @@
           <a href="#" class="nav-link">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Produk</a>
-        </li>
+    <a href="{{ url('/produk') }}" class="nav-link">Produk</a>
+     </li>
       </ul>
 
       <form class="d-flex" role="search">
