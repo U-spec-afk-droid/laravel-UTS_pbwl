@@ -56,6 +56,20 @@
         .row-gap-2 {
             gap: 1rem 0; 
         }
+
+        .form-select option:hover {
+            background-color: #d9e6ff !important; 
+            color: #4db2e5 !important; 
+        }
+
+        .form-select option:checked {
+            background-color: #b6cffb !important; 
+            color: #000000 !important;
+        }
+
+        .form-select:focus option:hover {
+            background-color: #6187cd !important;
+        }
     </style>
 </head>
 <body>
@@ -83,18 +97,25 @@
                     <label for="namaProduk" class="form-label">Nama Produk</label>
                     <input type="text" class="form-control" id="namaProduk" placeholder="Input Nama Produk">
                 </div>
-                <div class="col-md-4">
-                    <label for="jenisProduk" class="form-label">Jenis Produk</label>
-                    <input type="text" class="form-control" id="jenisProduk" placeholder="Pilih Produk">
+               <div class="col-md-4">
+                 <label for="jenisProduk" class="form-label">Jenis Produk</label>
+
+                 <select class="form-select" id="jenisProduk">
+                     <option selected disabled>Pilih Produk</option> 
+
+                      @for ($i = 0; $i < count($jenis_produk); $i++)
+                          <option value="{{ $jenis_produk[$i] }}">{{ $jenis_produk[$i] }}</option>
+                      @endfor
+                    </select>
                 </div>
             </div>
 
             <div class="row row-gap-3 mb-4">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <label for="harga" class="form-label">Harga</label>
                     <input type="text" class="form-control" id="harga" placeholder="Input Harga">
                 </div>
-                <div class="col-md-4 d-flex align-items-end">
+                <div class="col-md-6 d-flex align-items-end">
                     <button type="submit" class="btn btn-success-custom w-100">Simpan</button>
                 </div>
             </div>

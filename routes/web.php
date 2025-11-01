@@ -19,3 +19,8 @@ Route::get('/produk/tambah', function () {
     return view('tambahproduk'); 
 })->name('produk.tambah');
 
+Route::get('/produk/tambah', function () {
+    $jenis_produk = ['Alat tulis', 'Elektronik', 'Sembako','Pakaian','Lain-lain',];
+    return view('tambahproduk', compact('jenis_produk')); 
+})->name('produk.tambah');
+
